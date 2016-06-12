@@ -69,9 +69,10 @@ router.get('/', function(req, res, next) {
   // res.redirect('/songs');
 });
 
-router.get('/index', function(req, res, next) {
-  res.render('index', {layout:'layout-login'} );
-  // res.redirect('/songs');
+/*start welcome page*/
+router.get('/welcome', function(req, res){
+  res.render('welcome');
 });
+/*end welcome page*/
 
 module.exports = router;
