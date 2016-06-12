@@ -5,7 +5,7 @@
  */
 
 var app = require('../app');
-var debug = require('debug')('movies-ajax:server');
+var debug = require('debug')('dollah-io:server');
 var http = require('http');
 
 /**
