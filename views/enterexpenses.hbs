@@ -1,0 +1,15 @@
+we will use this page to enter your expenses
+
+<br><br><br><br>
+<form action="" method="get">
+	Search Expenses by Date: <input type="date" id="searchByDate" name="searchByDate" value="{{searchByDate}}">
+	<input id="filterBtn" type="submit" value="Filter">
+</form>
+
+{{#if searchByDate}}
+
+<p>
+
+Showing only expenses by: <span class="highlight">{{searchByDate}}</span>
+</p>
+{{/if}}
