@@ -1,7 +1,8 @@
 var mongoose = require('mongoose');
+var passportLocalMongoose = require('passport-local-mongoose');
 
 //establish schema
-var expenditure = mongoose.Schema({
+var Expenditure = mongoose.Schema({
   /*
   What did I buy
   How much was it for
@@ -20,3 +21,11 @@ var expenditure = mongoose.Schema({
   reimbursement_needed: Boolean
 
 });
+
+var UserSchema = new mongoose.Schema({ });
+UserSchema.plugin(passportLocalMongoose);
+mongoose.model('Expenditure', Expenditure);
+
+
+
+mongoose.connect('mongodb://localhost/dollah-io');
