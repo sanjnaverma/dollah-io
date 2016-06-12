@@ -25,7 +25,8 @@ var Expenditure = mongoose.Schema({
 var UserSchema = new mongoose.Schema({ });
 UserSchema.plugin(passportLocalMongoose);
 mongoose.model('Expenditure', Expenditure);
+mongoose.model('User', UserSchema);
 
 
 
-mongoose.connect('mongodb://localhost/dollah-io');
+mongoose.connect('mongodb://localhost/dollah-io-db');
