@@ -1,4 +1,3 @@
-we will use this page to enter your expenses
 
 <br><br>
 <form id="create-form" method="POST" action="">
@@ -30,13 +29,13 @@ we will use this page to enter your expenses
 		<label for="reimbursement_needed_input_id">Do I need to be reimbursed:</label>
 		<input type="text" name="reimbursement_needed_input_id" id="reimbursement_needed_input_id" value="">
 	</div>
-	<input type="submit" name="addBtn" id="addBtn" value="Add Expense">
+	<input class = "btn btn-default"  type="submit" name="addBtn" id="addBtn" value="Add Expense">
 </form>
 
 <br><br>
 <form action="" method="get">
 	Search by Items Purchased: <input type="date" id="searchByItemsPurchased" name="searchByItemsPurchased" value="{{searchByItemsPurchased}}">
-	<input id="filterBtn" type="submit" value="Filter">
+	<input class = "btn btn-default" id="filterBtn" type="submit" value="Filter">
 </form>
 
 {{#if searchByDate}}
