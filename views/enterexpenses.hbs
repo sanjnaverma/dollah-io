@@ -1,6 +1,39 @@
 we will use this page to enter your expenses
 
-<br><br><br><br>
+<br><br>
+<form id="create-form" method="POST" action="">
+	<div>
+		<label for="items_purchased_input_id">What did I buy:</label>
+		<input type="text" name="items_purchased_input_id" id="items_purchased_input_id" value="">
+	</div>
+  <div>
+		<label for="price_of_purchase_input_id">How much was it for:</label>
+		<input type="text" name="price_of_purchase_input_id" id="price_of_purchase_input_id" value="">
+	</div>
+  <div>
+		<label for="date_of_purchase_input_id">When did I buy it:</label>
+		<input type="text" name="date_of_purchase_input_id" id="date_of_purchase_input_id" value="">
+	</div>
+  <div>
+		<label for="reason_for_purchase_input_id">Why did I buy it:</label>
+		<input type="text" name="reason_for_purchase_input_id" id="reason_for_purchase_input_id" value="">
+	</div>
+  <div>
+		<label for="location_of_purchase_input_id">Where did I buy it:</label>
+		<input type="text" name="location_of_purchase_input_id" id="location_of_purchase_input_id" value="">
+	</div>
+  <div>
+		<label for="payment_method_input_id">Which payment method did I use:</label>
+		<input type="text" name="payment_method_input_id" id="payment_method_input_id" value="">
+	</div>
+  <div>
+		<label for="reimbursement_needed_input_id">Do I need to be reimbursed:</label>
+		<input type="text" name="reimbursement_needed_input_id" id="reimbursement_needed_input_id" value="">
+	</div>
+	<input type="submit" name="addBtn" id="addBtn" value="Add Expense">
+</form>
+
+<br><br>
 <form action="" method="get">
 	Search Expenses by Date: <input type="date" id="searchByDate" name="searchByDate" value="{{searchByDate}}">
 	<input id="filterBtn" type="submit" value="Filter">
@@ -13,3 +46,32 @@ we will use this page to enter your expenses
 Showing only expenses by: <span class="highlight">{{searchByDate}}</span>
 </p>
 {{/if}}
+
+
+
+<h2>Expense Table</h2>
+<table align="center">
+	<thead>
+		<th>What did I buy</th>
+    <th>How much was it for</th>
+    <th>When did I buy it</th>
+    <th>Why did I buy it</th>
+    <th>Where did I buy it</th>
+    <th>Which payment method did I use</th>
+    <th>Do I need to be reimbursed</th>
+	</thead>
+	<tbody id="expense-list">
+		{{#each expense}}
+		<tr>
+			<td>{{items_purchased}}</td>
+			<td>{{price_paid}}</td>
+      <td>{{date_bought}}</td>
+      <td>{{reason_for_purchase}}</td>
+      <td>{{location_of_purchase}}</td>
+      <td>{{payment_method}}</td>
+      <td>{{reimbursement_needed}}</td>
+		</tr>
+		{{/each}}
+
+	</tbody>
+</table>

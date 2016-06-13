@@ -22,11 +22,19 @@ var Expenditure = mongoose.Schema({
 
 });
 
+var Movie = mongoose.Schema({
+  title: String,
+  director: String,
+  year: Number
+});
+
+
+
 var UserSchema = new mongoose.Schema({ });
 UserSchema.plugin(passportLocalMongoose);
 mongoose.model('Expenditure', Expenditure);
 mongoose.model('User', UserSchema);
-
+mongoose.model('Movie', Movie);
 
 
 mongoose.connect('mongodb://localhost/dollah-io-db');
