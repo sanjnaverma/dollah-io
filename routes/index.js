@@ -109,7 +109,7 @@ router.post('/api/enterexpenses', function(req, res) {
   (new Expenditure({
       items_purchased: req.body.items_purchased_input_id,
       price_paid: req.body.price_of_purchase_input_id,
-      date_bought: req.body.date_of_purchase_input_id,//{type: Date, default: Date.now},
+      date_bought: {type: Date, default: Date.now},//req.body.date_of_purchase_input_id,//{type: Date, default: Date.now},
       reason_for_purchase: req.body.reason_for_purchase_input_id,
       location_of_purchase: req.body.location_of_purchase_input_id,
       payment_method: req.body.payment_method_input_id,

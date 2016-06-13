@@ -1,31 +1,41 @@
+<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
 
 <br><br>
-<form id="create-form" method="POST" action="">
-	<div>
+<form id="create-form" class="pure-form pure-form-aligned" method="POST" action="">
+	<div class="pure-control-group">
 		<label for="items_purchased_input_id">What did I buy:</label>
 		<input type="text" name="items_purchased_input_id" id="items_purchased_input_id" value="">
 	</div>
-  <div>
+  <div class="pure-control-group">
 		<label for="price_of_purchase_input_id">How much was it for:</label>
 		<input type="text" name="price_of_purchase_input_id" id="price_of_purchase_input_id" value="">
 	</div>
-  <div>
+  <div class="pure-control-group">
 		<label for="date_of_purchase_input_id">When did I buy it:</label>
-		<input type="text" name="date_of_purchase_input_id" id="date_of_purchase_input_id" value="">
+		<input type="date" name="date_of_purchase_input_id" id="date_of_purchase_input_id" value="">
 	</div>
-  <div>
+  <div class="pure-control-group">
 		<label for="reason_for_purchase_input_id">Why did I buy it:</label>
 		<input type="text" name="reason_for_purchase_input_id" id="reason_for_purchase_input_id" value="">
 	</div>
-  <div>
+  <div class="pure-control-group">
 		<label for="location_of_purchase_input_id">Where did I buy it:</label>
 		<input type="text" name="location_of_purchase_input_id" id="location_of_purchase_input_id" value="">
 	</div>
-  <div>
-		<label for="payment_method_input_id">Which payment method did I use:</label>
-		<input type="text" name="payment_method_input_id" id="payment_method_input_id" value="">
+  <div class="pure-control-group">
+
+    <div class="pure-u-1 pure-u-md-1-3">
+                <label for="payment_method_input_id">Which payment method did I use:</label>
+                <select id="payment_method_input_id" class="pure-input-1-2">
+                    <option>American Express</option>
+                    <option>Debit Card Wells Fargo</option>
+                    <option>Venmo</option>
+                </select>
+            </div>
 	</div>
-  <div>
+  <div class="pure-control-group">
 		<label for="reimbursement_needed_input_id">Do I need to be reimbursed:</label>
 		<input type="text" name="reimbursement_needed_input_id" id="reimbursement_needed_input_id" value="">
 	</div>
