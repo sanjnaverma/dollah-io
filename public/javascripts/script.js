@@ -12,7 +12,7 @@ function handleFilterButtonClick(evt) {
     // console.log("button clicked");
     // get the value of the input field
     var items_purchased = document.querySelector('#searchByItemsPurchased').value;
-    console.log(items_purchased);
+    // console.log(items_purchased);
 
 
     var req = new XMLHttpRequest();

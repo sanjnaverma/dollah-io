@@ -106,8 +106,6 @@ router.get('/api/enterexpenses', function(req, res){
 });
 
 router.post('/api/enterexpenses', function(req, res) {
-  console.log("*****");
-  console.log(req.body.items_purchased_input_id);
   (new Expenditure({
       items_purchased: req.body.items_purchased_input_id,
       price_paid: req.body.price_of_purchase_input_id,
@@ -122,9 +120,6 @@ router.post('/api/enterexpenses', function(req, res) {
   });
 });
 
-// router.get('/enterexpenses/create', function(req, res) {
-//   res.render('enterexpenses-create', {});
-// });
 
 /*End AJAX*/
 
