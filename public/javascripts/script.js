@@ -138,7 +138,13 @@ function handleSend(evt) {
 
     // console.log(data);
 
-    document.querySelector("#songTitle").value = "";//reset the values in the form
-    document.querySelector("#songArtist").value = ""; //reset the values in the form
+    document.querySelector("#items_purchased_input_id").value = "";//reset the values in the form
+    document.querySelector("#price_of_purchase_input_id").value = ""; //reset the values in the form
+    document.querySelector("#date_of_purchase_input_id").value = ""; //reset the values in the form
+    document.querySelector("#reason_for_purchase_input_id").value = ""; //reset the values in the form
+    document.querySelector("#location_of_purchase_input_id").value = ""; //reset the values in the form
+    document.querySelector("#payment_method_input_id").value = ""; //reset the values in the form
+    document.querySelector("#reimbursement_needed_input_id").value = ""; //reset the values in the form
+
     req.send(data);
 }
