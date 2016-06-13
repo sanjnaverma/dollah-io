@@ -14,7 +14,7 @@ var Expenditure = mongoose.Schema({
   */
   items_purchased: String,
   price_paid: Number,
-  date_bought: {type: Date, default: Date.now},
+  date_bought: String,//{type: Date, default: Date.now},
   reason_for_purchase: String,
   location_of_purchase: String,
   payment_method: String,

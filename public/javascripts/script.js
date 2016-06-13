@@ -9,11 +9,12 @@ function main(evt) {
 
 function handleFilterButtonClick(evt) {
     evt.preventDefault();
-    console.log("button clicked");
+    // console.log("button clicked");
     // get the value of the input field
-    var items_purchased = document.querySelector('#items_purchased').value;
+    var items_purchased = document.querySelector('#searchByItemsPurchased').value;
     console.log(items_purchased);
-    // create the object
+
+
     var req = new XMLHttpRequest();
 
     // configure
@@ -29,9 +30,11 @@ function handleFilterButtonClick(evt) {
         var expenseTable = document.getElementById('expense-list');
 
         //delete contents of the table
+        //delete contents of the table
         while(expenseTable.firstChild){
-      		expenseTable.removeChild(expenseTable.firstChild);
-      	}
+            expenseTable.removeChild(expenseTable.firstChild);
+        }
+
 
         var rowcounter = 0;
         while(rowcounter < data.length){
@@ -52,23 +55,24 @@ function handleFilterButtonClick(evt) {
           new_payment_method.textContent = data[rowcounter].payment_method;
           new_reimbursement_needed.textContent = data[rowcounter].reimbursement_needed;
 
-
-
-      		newrow.appendChild(new_item_purchased);
-      		newrow.appendChild(new_price_paid);
-      		newrow.appendChild(new_date_bought);
+          newrow.appendChild(new_item_purchased);
+          newrow.appendChild(new_price_paid);
+          newrow.appendChild(new_date_bought);
           newrow.appendChild(new_reason_for_purchase);
-      		newrow.appendChild(new_location_of_purchase);
-      		newrow.appendChild(new_payment_method);
+          newrow.appendChild(new_location_of_purchase);
+          newrow.appendChild(new_payment_method);
           newrow.appendChild(new_reimbursement_needed);
+
 
 
       		expenseTable.appendChild(newrow);
 
           rowcounter+=1;
         }
-        console.log("table is created");
+        // console.log("table is created");
     });
+    document.querySelector('#searchByItemsPurchased').value = "" ;
+
 
     // send
     req.send();
@@ -99,11 +103,7 @@ function handleSend(evt) {
 
     // url encoded.... name value pairs
     // name=value
-    var data = 'items_purchased_input_id=' + document.querySelector("#items_purchased_input_id").value + "&price_of_purchase_input_id=" + document.querySelector("#price_of_purchase_input_id").value + "&date_of_purchase_input_id="+document.querySelector("#date_of_purchase_input_id").value + "&reason_for_purchase_input_id="+document.querySelector("#reason_for_purchase_input_id").value + "&location_of_purchase_input_id="+document.querySelector("#location_of_purchase_input_id").value;
-
-    data +="&payment_method_input_id="+document.querySelector("#reimbursement_needed_input_id").value +"&reimbursement_needed_input_id="+document.querySelector("#reimbursement_needed_input_id").value;
-
-
+    var data = 'items_purchased_input_id=' + document.querySelector("#items_purchased_input_id").value + "&price_of_purchase_input_id=" + document.querySelector("#price_of_purchase_input_id").value + "&date_of_purchase_input_id="+document.querySelector("#date_of_purchase_input_id").value + "&reason_for_purchase_input_id="+document.querySelector("#reason_for_purchase_input_id").value + "&location_of_purchase_input_id="+document.querySelector("#location_of_purchase_input_id").value +"&payment_method_input_id="+document.querySelector("#reimbursement_needed_input_id").value +"&reimbursement_needed_input_id="+document.querySelector("#reimbursement_needed_input_id").value;    var songTable = document.getElementById('song-list');
 
     var expenseTable = document.getElementById('expense-list');
 
@@ -124,7 +124,6 @@ function handleSend(evt) {
     new_payment_method.textContent = document.querySelector('#payment_method_input_id').value;
     new_reimbursement_needed.textContent = document.querySelector('#reimbursement_needed_input_id').value;
 
-    console.log("!!!!"+document.querySelector("#items_purchased_input_id").value);
     newrow.appendChild(new_item_purchased);
     newrow.appendChild(new_price_paid);
     newrow.appendChild(new_date_bought);
@@ -133,11 +132,13 @@ function handleSend(evt) {
     newrow.appendChild(new_payment_method);
     newrow.appendChild(new_reimbursement_needed);
 
-    console.log("!!!!"+document.querySelector("#items_purchased_input_id").value);
     expenseTable.appendChild(newrow);
 
-    console.log("table is created");
+    // console.log("table is created");
 
-    console.log(data);
+    // console.log(data);
+
+    document.querySelector("#songTitle").value = "";//reset the values in the form
+    document.querySelector("#songArtist").value = ""; //reset the values in the form
     req.send(data);
 }
