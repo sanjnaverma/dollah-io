@@ -1,11 +1,13 @@
 document.addEventListener("DOMContentLoaded", main);
 function main(evt) {
+
    var filterBtn = document.querySelector('#filterBtn');
    filterBtn.addEventListener('click', handleFilterButtonClick);
 
    var addBtn = document.querySelector('#addBtn');
    addBtn.addEventListener('click', handleSend);
 }
+
 
 function handleFilterButtonClick(evt) {
     evt.preventDefault();
