@@ -12,7 +12,7 @@ function handleFilterButtonClick(evt) {
     // console.log("button clicked");
     // get the value of the input field
     var items_purchased = document.querySelector('#searchByItemsPurchased').value;
-    // console.log(items_purchased);
+    console.log(items_purchased);
 
 
     var req = new XMLHttpRequest();
@@ -62,9 +62,6 @@ function handleFilterButtonClick(evt) {
           newrow.appendChild(new_location_of_purchase);
           newrow.appendChild(new_payment_method);
           newrow.appendChild(new_reimbursement_needed);
-
-
-
       		expenseTable.appendChild(newrow);
 
           rowcounter+=1;
@@ -103,7 +100,9 @@ function handleSend(evt) {
 
     // url encoded.... name value pairs
     // name=value
-    var data = 'items_purchased_input_id=' + document.querySelector("#items_purchased_input_id").value + "&price_of_purchase_input_id=" + document.querySelector("#price_of_purchase_input_id").value + "&date_of_purchase_input_id="+document.querySelector("#date_of_purchase_input_id").value + "&reason_for_purchase_input_id="+document.querySelector("#reason_for_purchase_input_id").value + "&location_of_purchase_input_id="+document.querySelector("#location_of_purchase_input_id").value +"&payment_method_input_id="+document.querySelector("#reimbursement_needed_input_id").value +"&reimbursement_needed_input_id="+document.querySelector("#reimbursement_needed_input_id").value;    var songTable = document.getElementById('song-list');
+    var data = 'items_purchased_input_id=' + document.querySelector("#items_purchased_input_id").value + "&price_of_purchase_input_id=" + document.querySelector("#price_of_purchase_input_id").value + "&date_of_purchase_input_id="+document.querySelector("#date_of_purchase_input_id").value + "&reason_for_purchase_input_id="+document.querySelector("#reason_for_purchase_input_id").value + "&location_of_purchase_input_id="+document.querySelector("#location_of_purchase_input_id").value +"&payment_method_input_id="+document.querySelector("#reimbursement_needed_input_id").value +"&reimbursement_needed_input_id="+document.querySelector("#reimbursement_needed_input_id").value;
+
+
 
     var expenseTable = document.getElementById('expense-list');
 
