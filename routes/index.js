@@ -80,9 +80,10 @@ router.get('/welcome', function(req, res){
 router.get('/enterexpenses', function(req, res) {
   var expenseFilter = {},
     searchExists = false;
-
-  if(req.query.itemBought) {
-    expenseFilter.itemBought = req.query.itemBought;
+  console.log("!!!!noidea");
+  console.log(req.body.blah);
+  if(req.query.items_purchased) {
+    expenseFilter.itemBought = req.query.items_purchased;
     searchExists = true;
   }
 

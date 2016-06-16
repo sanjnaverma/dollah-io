@@ -1,6 +1,10 @@
 <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
+<br><br>
+<form action="" method="get">
+	Search by Items Purchased: <input type="text" id="blah" name="blah" value="{{items_purchased}}">
+	<input class = "btn btn-default" id="filterBtn" type="submit" value="Filter">
+</form>
 
 <br><br>
 <form id="create-form" class="pure-form pure-form-aligned" method="POST" action="">
@@ -41,11 +45,7 @@
 	<input class = "btn btn-default"  type="submit" name="addBtn" id="addBtn" value="Add Expense">
 </form>
 
-<br><br>
-<form action="" method="get">
-	Search by Items Purchased: <input type="text" id="searchByItemsPurchased" name="searchByItemsPurchased" value="{{searchByItemsPurchased}}">
-	<input class = "btn btn-default" id="filterBtn" type="submit" value="Filter">
-</form>
+
 
 {{#if searchByDate}}
 

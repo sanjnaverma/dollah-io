@@ -13,7 +13,7 @@ function handleFilterButtonClick(evt) {
     evt.preventDefault();
     // console.log("button clicked");
     // get the value of the input field
-    var items_purchased = document.querySelector('#searchByItemsPurchased').value;
+    var items_purchased = document.querySelector('#blah').value;
     console.log(items_purchased);
 
 
